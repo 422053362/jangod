@@ -35,7 +35,7 @@ public class IfTag implements Tag {
 	final String TAGNAME = "if";
 	final String ENDTAGNAME = "endif";
 
-	@Override
+	
 	public String interpreter(NodeList carries, String helpers, JangodInterpreter interpreter) throws InterpretException {
 		if (helpers.length() == 0) {
 			throw new InterpretException("Tag 'if' expects 1 helper >>> 0");
@@ -63,12 +63,12 @@ public class IfTag implements Tag {
 		return sb.toString();
 	}
 
-	@Override
+	
 	public String getEndTagName() {
 		return ENDTAGNAME;
 	}
 
-	@Override
+	
 	public String getName() {
 		return TAGNAME;
 	}

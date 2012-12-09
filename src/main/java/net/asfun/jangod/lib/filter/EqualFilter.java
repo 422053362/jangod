@@ -23,7 +23,7 @@ import net.asfun.jangod.util.ObjectStringEqual;
 
 public class EqualFilter implements Filter {
 
-	@Override
+	
 	public Object filter(Object object, JangodInterpreter interpreter, String... arg) throws InterpretException {
 		if (arg.length != 1) {
 			throw new InterpretException("filter equal expects 1 arg >>> " + arg.length);
@@ -45,7 +45,7 @@ public class EqualFilter implements Filter {
 		}
 	}
 
-	@Override
+	
 	public String getName() {
 		return "equal";
 	}

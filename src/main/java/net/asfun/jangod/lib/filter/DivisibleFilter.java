@@ -21,7 +21,7 @@ import net.asfun.jangod.lib.Filter;
 
 public class DivisibleFilter implements Filter {
 
-	@Override
+	
 	public Object filter(Object object, JangodInterpreter interpreter, String... arg) throws InterpretException {
 		if (object == null) {
 			return false;
@@ -39,7 +39,7 @@ public class DivisibleFilter implements Filter {
 		return false;
 	}
 
-	@Override
+	
 	public String getName() {
 		return "divisible";
 	}

@@ -26,7 +26,7 @@ import net.asfun.jangod.lib.Filter;
 
 public class LengthFilter implements Filter {
 
-	@Override
+	
 	public Object filter(Object object, JangodInterpreter interpreter, String... arg) throws InterpretException {
 		if (null == object) {
 			return 0;
@@ -70,7 +70,7 @@ public class LengthFilter implements Filter {
 		return 0;
 	}
 
-	@Override
+	
 	public String getName() {
 		return "length";
 	}

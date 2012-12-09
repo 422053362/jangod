@@ -27,7 +27,7 @@ import net.asfun.jangod.lib.Filter;
 
 public class RandomFilter implements Filter {
 
-	@Override
+	
 	public Object filter(Object object, JangodInterpreter interpreter, String... arg) throws InterpretException {
 		if (object == null) {
 			return null;
@@ -92,7 +92,7 @@ public class RandomFilter implements Filter {
 		return object;
 	}
 
-	@Override
+	
 	public String getName() {
 		return "filter";
 	}

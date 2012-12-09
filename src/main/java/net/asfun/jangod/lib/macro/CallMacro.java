@@ -11,12 +11,12 @@ public class CallMacro implements Macro {
 
 	final String MACRONAME = "call";
 
-	@Override
+	
 	public String getEndMacroName() {
 		return null;
 	}
 
-	@Override
+	
 	public void refactor(Node current, String helpers, TreeRebuilder rebuilder) throws ParseException {
 		// helpers like name arg2=val2,arg3=var3
 		String name = "";// TODO get from helpers;
@@ -34,7 +34,7 @@ public class CallMacro implements Macro {
 		rebuilder.nodeReplace(current, defineNode.clone().children());
 	}
 
-	@Override
+	
 	public String getName() {
 		return MACRONAME;
 	}

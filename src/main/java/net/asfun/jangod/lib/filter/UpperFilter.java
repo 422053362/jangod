@@ -21,7 +21,7 @@ import net.asfun.jangod.lib.Filter;
 
 public class UpperFilter implements Filter {
 
-	@Override
+	
 	public Object filter(Object object, JangodInterpreter interpreter, String... arg) throws InterpretException {
 		if (object instanceof String) {
 			String value = object.toString();
@@ -30,7 +30,7 @@ public class UpperFilter implements Filter {
 		return object;
 	}
 
-	@Override
+	
 	public String getName() {
 		return "upper";
 	}

@@ -31,17 +31,17 @@ public class ElseTag implements Tag {
 
 	static final String ELSE = "else";
 
-	@Override
+	
 	public String interpreter(NodeList carries, String helpers, JangodInterpreter interpreter) throws InterpretException {
 		return Constants.STR_BLANK;
 	}
 
-	@Override
+	
 	public String getEndTagName() {
 		return null;
 	}
 
-	@Override
+	
 	public String getName() {
 		return ELSE;
 	}

@@ -24,7 +24,7 @@ import java.io.Reader;
 
 public class FileLocater implements ResourceLocater {
 
-	@Override
+	
 	public String getDirectory(String fullName) throws IOException {
 		File file = new File(fullName);
 		if (file.isFile()) {
@@ -33,7 +33,7 @@ public class FileLocater implements ResourceLocater {
 		return file.getCanonicalPath();
 	}
 
-	@Override
+	
 	public String getFullName(String relativeName, String relativeDir, String defaultDir) throws IOException {
 		File file = new File(relativeDir + File.separator + relativeName);
 		if (file.exists() && file.isFile()) {
@@ -50,7 +50,7 @@ public class FileLocater implements ResourceLocater {
 		throw new IOException("File not found >>> '" + relativeName + "' in " + relativeDir + " and " + defaultDir);
 	}
 
-	@Override
+	
 	public String getFullName(String relativeName, String defaultDir) throws IOException {
 		File file = new File(relativeName);
 		if (file.exists() && file.isFile()) {
@@ -63,7 +63,7 @@ public class FileLocater implements ResourceLocater {
 		throw new IOException("File not found >>> '" + relativeName + "' in " + defaultDir);
 	}
 
-	@Override
+	
 	public Reader getReader(String fullName, String encoding) throws IOException {
 		File file = new File(fullName);
 		if (file.exists() && file.isFile()) {
@@ -72,7 +72,7 @@ public class FileLocater implements ResourceLocater {
 		throw new IOException("File not found >>> " + fullName);
 	}
 
-	@Override
+	
 	public String getString(String fullName, String encoding) throws IOException {
 		Reader reader = getReader(fullName, encoding);
 		BufferedReader br = new BufferedReader(reader);

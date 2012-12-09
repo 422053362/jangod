@@ -23,7 +23,7 @@ import net.asfun.jangod.util.ObjectValue;
 
 public class CutFilter implements Filter {
 
-	@Override
+	
 	public Object filter(Object object, JangodInterpreter interpreter, String... arg) throws InterpretException {
 		if (arg.length != 1) {
 			throw new InterpretException("filter cut expects 1 arg >>> " + arg.length);
@@ -33,7 +33,7 @@ public class CutFilter implements Filter {
 		return origin.replace(cutee, Constants.STR_BLANK);
 	}
 
-	@Override
+	
 	public String getName() {
 		return "cut";
 	}

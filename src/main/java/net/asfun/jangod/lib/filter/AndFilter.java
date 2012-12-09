@@ -22,7 +22,7 @@ import net.asfun.jangod.util.ObjectTruthValue;
 
 public class AndFilter implements Filter {
 
-	@Override
+	
 	public Object filter(Object object, JangodInterpreter interpreter, String... arg) throws InterpretException {
 		if (!ObjectTruthValue.evaluate(object)) {
 			return false;
@@ -38,7 +38,7 @@ public class AndFilter implements Filter {
 		}
 	}
 
-	@Override
+	
 	public String getName() {
 		return "and";
 	}

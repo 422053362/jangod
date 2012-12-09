@@ -33,7 +33,7 @@ public class CycleTag implements Tag {
 	final String LOOP_INDEX = "loop.index";
 	final String TAGNAME = "cycle";
 
-	@Override
+	
 	public String interpreter(NodeList carries, String helpers, JangodInterpreter interpreter) throws InterpretException {
 		String[] values;
 		String var = null;
@@ -75,12 +75,12 @@ public class CycleTag implements Tag {
 		}
 	}
 
-	@Override
+	
 	public String getEndTagName() {
 		return null;
 	}
 
-	@Override
+	
 	public String getName() {
 		return TAGNAME;
 	}

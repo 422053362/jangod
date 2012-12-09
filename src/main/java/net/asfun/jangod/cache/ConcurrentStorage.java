@@ -22,12 +22,12 @@ public class ConcurrentStorage<K, V> implements StatelessObjectStorage<K, V> {
 
 	final ConcurrentHashMap<K, SoftReference<V>> storage = new ConcurrentHashMap<K, SoftReference<V>>();
 
-	@Override
+	
 	public void clear() {
 		storage.clear();
 	}
 
-	@Override
+	
 	public V get(K key) {
 		SoftReference<V> ref = storage.get(key);
 		if (ref != null) {
@@ -40,12 +40,12 @@ public class ConcurrentStorage<K, V> implements StatelessObjectStorage<K, V> {
 		return null;
 	}
 
-	@Override
+	
 	public void put(K key, V value) {
 		storage.put(key, new SoftReference<V>(value));
 	}
 
-	@Override
+	
 	public void remove(K key) {
 		storage.remove(key);
 	}

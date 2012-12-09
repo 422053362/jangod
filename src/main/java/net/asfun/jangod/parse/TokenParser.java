@@ -69,7 +69,7 @@ public class TokenParser implements Iterator<Token> {
 		proceeding = true;
 	}
 
-	@Override
+	
 	public boolean hasNext() {
 		if (proceeding) {
 			try {
@@ -89,7 +89,7 @@ public class TokenParser implements Iterator<Token> {
 		return false;
 	}
 
-	@Override
+	
 	public Token next() {
 		if (proceeding) {
 			if (token == null) {
@@ -114,7 +114,7 @@ public class TokenParser implements Iterator<Token> {
 		throw new NoSuchElementException();
 	}
 
-	@Override
+	
 	public void remove() {
 		throw new UnsupportedOperationException();
 	}

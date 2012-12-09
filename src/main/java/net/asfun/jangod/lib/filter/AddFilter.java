@@ -24,7 +24,7 @@ import net.asfun.jangod.lib.Filter;
 
 public class AddFilter implements Filter {
 
-	@Override
+	
 	public Object filter(Object object, JangodInterpreter interpreter, String... arg) throws InterpretException {
 		if (arg.length != 1) {
 			throw new InterpretException("filter add expects 1 arg >>> " + arg.length);
@@ -81,7 +81,7 @@ public class AddFilter implements Filter {
 		return object;
 	}
 
-	@Override
+	
 	public String getName() {
 		return "add";
 	}

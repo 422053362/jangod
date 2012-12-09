@@ -36,7 +36,7 @@ public class ExtendsTag implements Tag {
 
 	final String TAGNAME = "extends";
 
-	@Override
+	
 	public String interpreter(NodeList carries, String helpers, JangodInterpreter interpreter) throws InterpretException {
 		String[] helper = new HelperStringTokenizer(helpers).allTokens();
 		if (helper.length != 1) {
@@ -60,12 +60,12 @@ public class ExtendsTag implements Tag {
 		}
 	}
 
-	@Override
+	
 	public String getEndTagName() {
 		return null;
 	}
 
-	@Override
+	
 	public String getName() {
 		return TAGNAME;
 	}

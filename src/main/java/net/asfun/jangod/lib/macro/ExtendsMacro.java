@@ -15,12 +15,12 @@ public class ExtendsMacro implements Macro {
 
 	final String MACRONAME = "extends";
 
-	@Override
+	
 	public String getEndMacroName() {
 		return null;
 	}
 
-	@Override
+	
 	public void refactor(Node current, String helpers, TreeRebuilder rebuilder) throws ParseException {
 		String[] helper = new HelperStringTokenizer(helpers).allTokens();
 		if (helper.length != 1) {
@@ -40,7 +40,7 @@ public class ExtendsMacro implements Macro {
 		}
 	}
 
-	@Override
+	
 	public String getName() {
 		return MACRONAME;
 	}

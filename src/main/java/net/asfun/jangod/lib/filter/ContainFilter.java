@@ -27,7 +27,7 @@ import net.asfun.jangod.util.ObjectStringEqual;
 
 public class ContainFilter implements Filter {
 
-	@Override
+	
 	public Object filter(Object object, JangodInterpreter interpreter, String... arg) throws InterpretException {
 		if (object == null) {
 			return false;
@@ -81,7 +81,7 @@ public class ContainFilter implements Filter {
 		throw new InterpretException("filter contain can't be applied to >>> " + object.getClass().getName());
 	}
 
-	@Override
+	
 	public String getName() {
 		return "contain";
 	}

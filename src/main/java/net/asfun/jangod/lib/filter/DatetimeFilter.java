@@ -32,7 +32,7 @@ import org.springframework.format.datetime.joda.JodaTimeContextHolder;
 
 public class DatetimeFilter implements Filter {
 
-	@Override
+	
 	public Object filter(Object object, JangodInterpreter interpreter, String... arg) throws InterpretException {
 		if (object == null) {
 			return object;
@@ -68,7 +68,7 @@ public class DatetimeFilter implements Filter {
 		}
 	}
 
-	@Override
+	
 	public String getName() {
 		return "date";
 	}

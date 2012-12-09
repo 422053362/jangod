@@ -31,7 +31,7 @@ public class EscapeFilter implements Filter {
 	final String bsq = "&#39;";
 	final String bdq = "&quot;";
 
-	@Override
+	
 	public Object filter(Object object, JangodInterpreter interpreter, String... arg) throws InterpretException {
 		if (object instanceof String) {
 			String value = object.toString();
@@ -40,7 +40,7 @@ public class EscapeFilter implements Filter {
 		return object;
 	}
 
-	@Override
+	
 	public String getName() {
 		return "escape";
 	}

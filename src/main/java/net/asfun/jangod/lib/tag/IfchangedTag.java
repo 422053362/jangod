@@ -34,7 +34,7 @@ public class IfchangedTag implements Tag {
 	final String TAGNAME = "ifchanged";
 	final String ENDTAGNAME = "endif";
 
-	@Override
+	
 	public String interpreter(NodeList carries, String helpers, JangodInterpreter interpreter) throws InterpretException {
 		if (helpers.length() == 0) {
 			throw new InterpretException("Tag 'ifchanged' expects 1 helper >>> 0");
@@ -61,12 +61,12 @@ public class IfchangedTag implements Tag {
 		return Constants.STR_BLANK;
 	}
 
-	@Override
+	
 	public String getEndTagName() {
 		return ENDTAGNAME;
 	}
 
-	@Override
+	
 	public String getName() {
 		return TAGNAME;
 	}

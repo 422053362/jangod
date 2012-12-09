@@ -24,7 +24,7 @@ import net.asfun.jangod.lib.Filter;
 
 public class MultiplyFilter implements Filter {
 
-	@Override
+	
 	public Object filter(Object object, JangodInterpreter interpreter, String... arg) throws InterpretException {
 		if (arg.length != 1) {
 			throw new InterpretException("filter multiply expects 1 arg >>> " + arg.length);
@@ -72,7 +72,7 @@ public class MultiplyFilter implements Filter {
 		return object;
 	}
 
-	@Override
+	
 	public String getName() {
 		return "multiply";
 	}

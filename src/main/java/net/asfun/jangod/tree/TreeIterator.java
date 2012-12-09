@@ -31,12 +31,12 @@ public class TreeIterator implements Iterator<Node> {
 		}
 	}
 
-	@Override
+	
 	public boolean hasNext() {
 		return cursor != null;
 	}
 
-	@Override
+	
 	public Node next() {
 		Node res = cursor;
 		if (cursor != null) {
@@ -45,7 +45,7 @@ public class TreeIterator implements Iterator<Node> {
 		return res;
 	}
 
-	@Override
+	
 	public void remove() {
 		throw new UnsupportedOperationException();
 	}

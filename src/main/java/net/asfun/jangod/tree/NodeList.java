@@ -262,7 +262,7 @@ public class NodeList implements Iterable<Node>, Serializable, Cloneable {
 		return size == 0;
 	}
 
-	@Override
+	
 	public Iterator<Node> iterator() {
 		return new NodeItr();
 	}
@@ -279,7 +279,7 @@ public class NodeList implements Iterable<Node>, Serializable, Cloneable {
 		return tail;
 	}
 
-	@Override
+	
 	public NodeList clone() {
 		NodeList clone = new NodeList();
 		for (Node node : this) {
@@ -308,12 +308,12 @@ public class NodeList implements Iterable<Node>, Serializable, Cloneable {
 			cursor = head;
 		}
 
-		@Override
+		
 		public boolean hasNext() {
 			return cursor != null;
 		}
 
-		@Override
+		
 		public Node next() {
 			Node temp = cursor;
 			if (cursor != tail) {
@@ -324,7 +324,7 @@ public class NodeList implements Iterable<Node>, Serializable, Cloneable {
 			return temp;
 		}
 
-		@Override
+		
 		public void remove() {
 			NodeList.this.remove(cursor);
 		}

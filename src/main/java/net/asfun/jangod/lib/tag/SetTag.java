@@ -34,12 +34,12 @@ public class SetTag implements Tag {
 	final String TAGNAME = "set";
 	final String SCOPE_TOP = "top";
 
-	@Override
+	
 	public String getName() {
 		return TAGNAME;
 	}
 
-	@Override
+	
 	public String interpreter(NodeList carries, String helpers, JangodInterpreter interpreter) throws InterpretException {
 		String[] helper = new HelperStringTokenizer(helpers).allTokens();
 		// System.out.println(helper[1]);
@@ -59,7 +59,7 @@ public class SetTag implements Tag {
 		return Constants.STR_BLANK;
 	}
 
-	@Override
+	
 	public String getEndTagName() {
 		return null;
 	}

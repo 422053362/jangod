@@ -11,12 +11,12 @@ public class MacroMacro implements Macro {
 	final String ENDMACRONAME = "endmacro";
 	static final String MACRO_NAME_PREFIX = "'MACRO\"NAME:";
 
-	@Override
+	
 	public String getEndMacroName() {
 		return ENDMACRONAME;
 	}
 
-	@Override
+	
 	public void refactor(Node current, String helpers, TreeRebuilder rebuilder) throws ParseException {
 		// helpers like name arg1=val1,arg2=val2,arg3,
 		String name = "";// TODO resolve from helpers
@@ -25,7 +25,7 @@ public class MacroMacro implements Macro {
 		rebuilder.nodeRemove(current);
 	}
 
-	@Override
+	
 	public String getName() {
 		return MACRONAME;
 	}

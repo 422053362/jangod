@@ -24,7 +24,7 @@ public class TruncateFilter implements Filter {
 
 	final String ENDS = "...";
 
-	@Override
+	
 	public Object filter(Object object, JangodInterpreter interpreter, String... arg) throws InterpretException {
 		if (object instanceof String) {
 			int length = 100;
@@ -49,7 +49,7 @@ public class TruncateFilter implements Filter {
 		return object;
 	}
 
-	@Override
+	
 	public String getName() {
 		return "truncate";
 	}

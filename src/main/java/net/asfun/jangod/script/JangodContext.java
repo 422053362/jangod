@@ -38,7 +38,8 @@ public class JangodContext extends Context implements ScriptContext {
 		sessionBindings = new SimpleBindings();
 	}
 
-	@Override
+	
+
 	public int getAttributesScope(String name) {
 		if (sessionBindings.containsKey(name)) {
 			return ENGINE_SCOPE;
@@ -49,7 +50,8 @@ public class JangodContext extends Context implements ScriptContext {
 		return -1;
 	}
 
-	@Override
+	
+
 	public Bindings getBindings(int scope) {
 		switch (scope) {
 		case ENGINE_SCOPE:
@@ -61,17 +63,18 @@ public class JangodContext extends Context implements ScriptContext {
 		}
 	}
 
-	@Override
+	
 	public Writer getErrorWriter() {
 		return errw;
 	}
 
-	@Override
+	
 	public Reader getReader() {
 		return rd;
 	}
 
-	@Override
+	
+
 	public List<Integer> getScopes() {
 		List<Integer> scopes = new ArrayList<Integer>();
 		scopes.add(ScriptContext.ENGINE_SCOPE);
@@ -79,12 +82,13 @@ public class JangodContext extends Context implements ScriptContext {
 		return scopes;
 	}
 
-	@Override
+	
 	public Writer getWriter() {
 		return wtr;
 	}
 
-	@Override
+	
+
 	public Object removeAttribute(String name, int scope) {
 		switch (scope) {
 		case ENGINE_SCOPE:
@@ -102,7 +106,7 @@ public class JangodContext extends Context implements ScriptContext {
 		}
 	}
 
-	@Override
+	
 	public void setBindings(Bindings bindings, int scope) {
 		if (bindings == null) {
 			throw new NullPointerException("Bindings cannot be null.");
@@ -119,17 +123,17 @@ public class JangodContext extends Context implements ScriptContext {
 		}
 	}
 
-	@Override
+	
 	public void setErrorWriter(Writer writer) {
 		errw = writer;
 	}
 
-	@Override
+	
 	public void setReader(Reader reader) {
 		rd = reader;
 	}
 
-	@Override
+	
 	public void setWriter(Writer writer) {
 		wtr = writer;
 	}

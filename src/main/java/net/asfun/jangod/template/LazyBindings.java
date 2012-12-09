@@ -53,12 +53,12 @@ public class LazyBindings implements Map<String, Object> {
 		bins.clear();
 	}
 
-	@Override
+	
 	public boolean containsKey(Object key) {
 		return keys.contains(key);
 	}
 
-	@Override
+	
 	public Object get(Object key) {
 		checkKey(key);
 		if (keys.contains(key)) {
@@ -88,14 +88,14 @@ public class LazyBindings implements Map<String, Object> {
 		return null;
 	}
 
-	@Override
+	
 	public Object put(String name, Object value) {
 		checkKey(name);
 		keys.add(name);
 		return bins.put(name, value);
 	}
 
-	@Override
+	
 	public void putAll(Map<? extends String, ? extends Object> toMerge) {
 		if (toMerge == null) {
 			throw new NullPointerException("toMerge map is null");
@@ -105,7 +105,7 @@ public class LazyBindings implements Map<String, Object> {
 		}
 	}
 
-	@Override
+	
 	public Object remove(Object key) {
 		keys.remove(key);
 		if (bins.containsKey(key)) {
@@ -118,39 +118,39 @@ public class LazyBindings implements Map<String, Object> {
 		}
 	}
 
-	@Override
+	
 	public void clear() {
 		keys.clear();
 		bins.clear();
 		lazies.clear();
 	}
 
-	@Override
+	
 	public boolean containsValue(Object value) {
 		return values().contains(value);
 	}
 
-	@Override
+	
 	public Set<java.util.Map.Entry<String, Object>> entrySet() {
 		return bins.entrySet();
 	}
 
-	@Override
+	
 	public boolean isEmpty() {
 		return keys.isEmpty();
 	}
 
-	@Override
+	
 	public Set<String> keySet() {
 		return keys;
 	}
 
-	@Override
+	
 	public int size() {
 		return keys.size();
 	}
 
-	@Override
+	
 	public Collection<Object> values() {
 		for (String key : lazies.keySet()) {
 			bins.put(key, getFromDataSource(key));

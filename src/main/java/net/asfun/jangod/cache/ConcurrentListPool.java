@@ -45,7 +45,7 @@ public class ConcurrentListPool<T> implements StatefulObjectPool<T> {
 		minimum = size;
 	}
 
-	@Override
+	
 	public T pop() {
 		Map.Entry<Integer, Reference<T>> entry = pool.pollFirstEntry();
 		if (entry != null) {
@@ -60,7 +60,7 @@ public class ConcurrentListPool<T> implements StatefulObjectPool<T> {
 		return null;
 	}
 
-	@Override
+	
 	public void push(T instance) {
 		if (counter.intValue() < minimum) {
 			pool.put(instance.hashCode(), new SoftReference<T>(instance));

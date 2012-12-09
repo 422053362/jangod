@@ -37,7 +37,7 @@ public class ForTag implements Tag {
 	final String TAGNAME = "for";
 	final String ENDTAGNAME = "endfor";
 
-	@Override
+	
 	public String interpreter(NodeList carries, String helpers, JangodInterpreter interpreter) throws InterpretException {
 		String[] helper = new HelperStringTokenizer(helpers).allTokens();
 		if (helper.length != 3) {
@@ -60,12 +60,12 @@ public class ForTag implements Tag {
 		return buff.toString();
 	}
 
-	@Override
+	
 	public String getEndTagName() {
 		return ENDTAGNAME;
 	}
 
-	@Override
+	
 	public String getName() {
 		return TAGNAME;
 	}

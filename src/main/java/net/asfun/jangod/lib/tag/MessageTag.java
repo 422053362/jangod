@@ -13,7 +13,7 @@ public class MessageTag implements Tag {
 
 	final String TAGNAME = "message";
 
-	@Override
+	
 	public String interpreter(NodeList carries, String helpers, JangodInterpreter interpreter) throws InterpretException {
 		String key;
 		String[] args;
@@ -49,12 +49,12 @@ public class MessageTag implements Tag {
 		return (val == null) ? token : String.valueOf(val);
 	}
 
-	@Override
+	
 	public String getEndTagName() {
 		return null;
 	}
 
-	@Override
+	
 	public String getName() {
 		return TAGNAME;
 	}

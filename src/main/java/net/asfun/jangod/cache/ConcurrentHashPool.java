@@ -45,7 +45,7 @@ public class ConcurrentHashPool<T> implements StatefulObjectPool<T> {
 		minimum = size;
 	}
 
-	@Override
+	
 	public T pop() {
 		Iterator<Integer> keys = pool.keySet().iterator();
 		while (keys.hasNext()) {
@@ -60,7 +60,7 @@ public class ConcurrentHashPool<T> implements StatefulObjectPool<T> {
 		return null;
 	}
 
-	@Override
+	
 	public void push(T instance) {
 		if (counter.intValue() < minimum) {
 			pool.put(instance.hashCode(), new SoftReference<T>(instance));

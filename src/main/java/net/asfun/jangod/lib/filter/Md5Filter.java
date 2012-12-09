@@ -60,7 +60,7 @@ public class Md5Filter implements Filter {
 		return result;
 	}
 
-	@Override
+	
 	public Object filter(Object object, JangodInterpreter interpreter, String... arg) throws InterpretException {
 		if (object instanceof String) {
 			return md5((String) object);
@@ -68,7 +68,7 @@ public class Md5Filter implements Filter {
 		return object;
 	}
 
-	@Override
+	
 	public String getName() {
 		return "md5";
 	}

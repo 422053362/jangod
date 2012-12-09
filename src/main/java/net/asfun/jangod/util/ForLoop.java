@@ -120,12 +120,12 @@ public class ForLoop implements Iterator {
 		return last;
 	}
 
-	@Override
+	
 	public boolean hasNext() {
 		return it.hasNext();
 	}
 
-	@Override
+	
 	public void remove() {
 		throw new UnsupportedOperationException();
 	}

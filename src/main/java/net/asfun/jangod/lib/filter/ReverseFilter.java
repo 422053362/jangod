@@ -25,7 +25,7 @@ import net.asfun.jangod.interpret.JangodInterpreter;
 import net.asfun.jangod.lib.Filter;
 
 public class ReverseFilter implements Filter {
-	@Override
+	
 	public Object filter(Object object, JangodInterpreter interpreter, String... arg) throws InterpretException {
 		if (object == null) {
 			return null;
@@ -66,7 +66,7 @@ public class ReverseFilter implements Filter {
 		return object;
 	}
 
-	@Override
+	
 	public String getName() {
 		return "reverse";
 	}

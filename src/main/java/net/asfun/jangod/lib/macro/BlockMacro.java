@@ -12,12 +12,12 @@ public class BlockMacro implements Macro {
 	final String ENDMACRONAME = "endblock";
 	final String BLK_NAME_PREFIX = "'BLK\"NAME:";
 
-	@Override
+	
 	public String getEndMacroName() {
 		return ENDMACRONAME;
 	}
 
-	@Override
+	
 	public void refactor(Node current, String helpers, TreeRebuilder rebuilder) throws ParseException {
 		String[] helper = new HelperStringTokenizer(helpers).allTokens();
 		if (helper.length != 1) {
@@ -37,7 +37,7 @@ public class BlockMacro implements Macro {
 		}
 	}
 
-	@Override
+	
 	public String getName() {
 		return MACRONAME;
 	}

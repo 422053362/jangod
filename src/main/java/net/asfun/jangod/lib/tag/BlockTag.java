@@ -41,7 +41,7 @@ public class BlockTag implements Tag {
 	final String ENDTAGNAME = "endblock";
 
 	@SuppressWarnings("unchecked")
-	@Override
+	
 	public String interpreter(NodeList carries, String helpers, JangodInterpreter interpreter) throws InterpretException {
 		String[] helper = new HelperStringTokenizer(helpers).allTokens();
 		if (helper.length != 1) {
@@ -88,12 +88,12 @@ public class BlockTag implements Tag {
 		return sb.toString();
 	}
 
-	@Override
+	
 	public String getEndTagName() {
 		return ENDTAGNAME;
 	}
 
-	@Override
+	
 	public String getName() {
 		return TAGNAME;
 	}

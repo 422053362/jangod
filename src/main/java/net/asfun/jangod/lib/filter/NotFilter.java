@@ -22,12 +22,12 @@ import net.asfun.jangod.util.ObjectTruthValue;
 
 public class NotFilter implements Filter {
 
-	@Override
+	
 	public Object filter(Object object, JangodInterpreter interpreter, String... arg) throws InterpretException {
 		return !ObjectTruthValue.evaluate(object);
 	}
 
-	@Override
+	
 	public String getName() {
 		return "not";
 	}

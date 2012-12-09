@@ -24,7 +24,7 @@ import net.asfun.jangod.lib.Filter;
 
 public class AbsFilter implements Filter {
 
-	@Override
+	
 	public Object filter(Object object, JangodInterpreter interpreter, String... arg) throws InterpretException {
 		if (object instanceof Integer) {
 			return Math.abs((Integer) object);
@@ -60,7 +60,7 @@ public class AbsFilter implements Filter {
 		return object;
 	}
 
-	@Override
+	
 	public String getName() {
 		return "abs";
 	}

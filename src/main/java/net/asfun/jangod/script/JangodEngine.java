@@ -54,7 +54,7 @@ public class JangodEngine implements ScriptEngine {
 		// TODO set default var like version, etc.
 	}
 
-	@Override
+	
 	public Bindings createBindings() {
 		try {
 			return (Bindings) Class.forName(defaultBindings).newInstance();
@@ -70,7 +70,7 @@ public class JangodEngine implements ScriptEngine {
 		return new SimpleBindings();
 	}
 
-	@Override
+	
 	public Object eval(String script, ScriptContext ctx) throws ScriptException {
 		TokenParser parser = new TokenParser(script);
 		JangodInterpreter interpreter = new JangodInterpreter((Context) ctx);
@@ -81,7 +81,7 @@ public class JangodEngine implements ScriptEngine {
 		}
 	}
 
-	@Override
+	
 	public Object eval(Reader reader, ScriptContext ctx) throws ScriptException {
 		TokenParser parser;
 		try {
@@ -97,12 +97,12 @@ public class JangodEngine implements ScriptEngine {
 		}
 	}
 
-	@Override
+	
 	public ScriptEngineFactory getFactory() {
 		return factory;
 	}
 
-	@Override
+	
 	public Object eval(String script) throws ScriptException {
 		TokenParser parser = new TokenParser(script);
 		JangodInterpreter interpreter = new JangodInterpreter((Context) context);
@@ -113,7 +113,7 @@ public class JangodEngine implements ScriptEngine {
 		}
 	}
 
-	@Override
+	
 	public Object eval(Reader reader) throws ScriptException {
 		TokenParser parser;
 		try {
@@ -129,7 +129,7 @@ public class JangodEngine implements ScriptEngine {
 		}
 	}
 
-	@Override
+	
 	public Object eval(String script, Bindings n) throws ScriptException {
 		TokenParser parser = new TokenParser(script);
 		ScriptContext ctx = new JangodContext(factory.globalBindings);
@@ -142,7 +142,7 @@ public class JangodEngine implements ScriptEngine {
 		}
 	}
 
-	@Override
+	
 	public Object eval(Reader reader, Bindings n) throws ScriptException {
 		TokenParser parser;
 		try {
@@ -161,32 +161,32 @@ public class JangodEngine implements ScriptEngine {
 		}
 	}
 
-	@Override
+	
 	public Object get(String key) {
 		return getBindings(ScriptContext.ENGINE_SCOPE).get(key);
 	}
 
-	@Override
+	
 	public Bindings getBindings(int scope) {
 		return context.getBindings(scope);
 	}
 
-	@Override
+	
 	public ScriptContext getContext() {
 		return context;
 	}
 
-	@Override
+	
 	public void put(String key, Object value) {
 		getBindings(ScriptContext.ENGINE_SCOPE).put(key, value);
 	}
 
-	@Override
+	
 	public void setBindings(Bindings bindings, int scope) {
 		context.setBindings(bindings, scope);
 	}
 
-	@Override
+	
 	public void setContext(ScriptContext scontext) {
 		context = scontext;
 	}

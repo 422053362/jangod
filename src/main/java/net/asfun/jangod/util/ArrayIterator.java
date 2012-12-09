@@ -31,12 +31,12 @@ public class ArrayIterator implements Iterator<Object> {
 		cursor = 0;
 	}
 
-	@Override
+	
 	public boolean hasNext() {
 		return cursor < length;
 	}
 
-	@Override
+	
 	public Object next() {
 		if (cursor >= length) {
 			throw new NoSuchElementException();
@@ -44,7 +44,7 @@ public class ArrayIterator implements Iterator<Object> {
 		return Array.get(array, cursor++);
 	}
 
-	@Override
+	
 	public void remove() {
 		throw new UnsupportedOperationException();
 	}

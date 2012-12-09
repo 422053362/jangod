@@ -35,7 +35,7 @@ public class IncludeTag implements Tag {
 
 	final String TAGNAME = "include";
 
-	@Override
+	
 	public String interpreter(NodeList carries, String helpers, JangodInterpreter interpreter) throws InterpretException {
 		String[] helper = new HelperStringTokenizer(helpers).allTokens();
 		if (helper.length != 1) {
@@ -53,12 +53,12 @@ public class IncludeTag implements Tag {
 		}
 	}
 
-	@Override
+	
 	public String getEndTagName() {
 		return null;
 	}
 
-	@Override
+	
 	public String getName() {
 		return TAGNAME;
 	}

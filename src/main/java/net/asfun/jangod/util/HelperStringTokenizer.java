@@ -52,12 +52,12 @@ public class HelperStringTokenizer implements Iterator<String> {
 		useComma = onOrOff;
 	}
 
-	@Override
+	
 	public boolean hasNext() {
 		return length > currPost;
 	}
 
-	@Override
+	
 	public String next() {
 		String token;
 		while (currPost < length) {
@@ -107,7 +107,7 @@ public class HelperStringTokenizer implements Iterator<String> {
 		return String.copyValueOf(helpers, lastStart, currPost - lastStart - 1);
 	}
 
-	@Override
+	
 	public void remove() {
 		throw new UnsupportedOperationException();
 	}

@@ -17,12 +17,12 @@ package net.asfun.jangod.cache;
 
 public class NoopPool<T> implements StatefulObjectPool<T> {
 
-	@Override
+	
 	public T pop() {
 		return null;
 	}
 
-	@Override
+	
 	public void push(T instance) {
 
 	}
