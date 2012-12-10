@@ -31,7 +31,7 @@ public class UpperFilter implements Filter {
 		}
 		Object key = interpreter.evaluateExpression(arg[0]);
 		if(object instanceof Map){
-			
+			System.out.println(key);
 			Map m = (Map)object;
 			return m.get(key);
 		}
