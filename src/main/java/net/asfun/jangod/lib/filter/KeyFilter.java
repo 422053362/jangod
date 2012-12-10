@@ -8,16 +8,23 @@ import net.asfun.jangod.lib.Filter;
 
 public class KeyFilter implements Filter {
 
-	
-	public Object filter(Object object, JangodInterpreter interpreter, String... arg) throws InterpretException {
-		if (object instanceof Map) {
-			String value = object.toString();
-			return value.toUpperCase();
+	@SuppressWarnings("rawtypes")
+	public Object filter(Object object, JangodInterpreter interpreter,
+			String... arg) throws InterpretException {
+
+		if (arg.length != 1) {
+			throw new InterpretException("filter multiply expects 1 arg >>> "
+					+ arg.length);
 		}
+		Object key = interpreter.evaluateExpression(arg[0]);
+		if (object instanceof Map) {
+			Map m = (Map) object;
+			return m.get(key);
+		}
+		
 		return object;
 	}
 
-	
 	public String getName() {
 		return "key";
 	}

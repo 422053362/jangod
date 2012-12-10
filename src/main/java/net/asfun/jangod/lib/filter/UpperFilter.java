@@ -23,24 +23,18 @@ import net.asfun.jangod.lib.Filter;
 
 public class UpperFilter implements Filter {
 
-	@SuppressWarnings("rawtypes")
+	
 	public Object filter(Object object, JangodInterpreter interpreter, String... arg) throws InterpretException {
-		
-		if (arg.length != 1) {
-			throw new InterpretException("filter multiply expects 1 arg >>> " + arg.length);
-		}
-		Object key = interpreter.evaluateExpression(arg[0]);
-		if(object instanceof Map){
-			System.out.println(key);
-			Map m = (Map)object;
-			return m.get(key);
+		if (object instanceof Map) {
+			String value = object.toString();
+			return value.toUpperCase();
 		}
 		return object;
 	}
 
 	
 	public String getName() {
-		return "key";
+		return "upper";
 	}
 
 }
