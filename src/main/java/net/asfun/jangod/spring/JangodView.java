@@ -49,6 +49,8 @@ public class JangodView extends InternalResourceView {
 		}
 		Locale locale = RequestContextUtils.getLocale(request);
 		response.setContentType(getContentType());
+		model.put("request", request);
+		model.put("response", response);
 		engine.process(templateFile, model, response.getWriter(), locale);
 	}
 
