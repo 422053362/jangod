@@ -4,8 +4,9 @@ import java.math.BigDecimal;
 
 import net.asfun.jangod.interpret.InterpretException;
 import net.asfun.jangod.interpret.JangodInterpreter;
+import net.asfun.jangod.lib.Filter;
 
-public class GtFilter {
+public class GtFilter implements Filter {
  
 	public Object filter(Object object, JangodInterpreter interpreter, String... arg) throws InterpretException {
 		if (arg.length != 1) {
